@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 NavigationLink {
-                    Text("애니메이션 버튼")
+                    AnimatedButtonView()
                 } label: {
                     Text("애니메이션 버튼")
                 }
