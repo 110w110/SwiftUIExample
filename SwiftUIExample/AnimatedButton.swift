@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AnimatedButton<ButtonContent: View>: View {
+    var tint: Color = .white
     var content: () -> ButtonContent
     var action: () async -> Status
     
@@ -17,8 +18,6 @@ struct AnimatedButton<ButtonContent: View>: View {
     @State private var isFailed: Bool = false
     /// 실패 시 팝업을 위한 상태 값
     @State private var showPopup: Bool = false
-    /// 실패 메시지
-    @State private var message: String = ""
     /// 작업 수행 상태에 대한 상태 값
     @State private var status: Status = .idle
     
@@ -32,9 +31,8 @@ struct AnimatedButton<ButtonContent: View>: View {
                 switch status {
                 case .idle:
                     isFailed = false
-                case .failed(let error):
+                case .failed:
                     isFailed = true
-                    message = error
                 case .success:
                     isFailed = false
                 }
@@ -46,12 +44,13 @@ struct AnimatedButton<ButtonContent: View>: View {
             }
         } label: {
             content()
+                .foregroundColor(tint == .white ? nil : .white)
                 .padding(.horizontal, 20)
                 .padding(.vertical, 15)
                 .opacity(isLoading ? 0 : 1)
                 .lineLimit(1)
                 .frame(width: isLoading ? 50 : nil, height: isLoading ? 50 : nil)
-                .background(Color(status == .idle ? .systemBackground : status == .success ? .systemMint : .systemRed).shadow(.drop(color: .black.opacity(0.2), radius: 6)), in: Capsule())
+                .background(Color(status == .idle ? UIColor(tint) : status == .success ? .systemMint : .systemRed).shadow(.drop(color: .gray.opacity(0.2), radius: 6)), in: Capsule())
                 .overlay {
                     if isLoading && status == .idle {
                         ProgressView()
@@ -73,7 +72,7 @@ struct AnimatedButton<ButtonContent: View>: View {
 
 enum Status: Equatable {
     case idle
-    case failed(String)
+    case failed
     case success
 }
 

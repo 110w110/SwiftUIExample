@@ -9,12 +9,11 @@ import SwiftUI
 
 struct AnimatedButtonView: View {
     var body: some View {
-        AnimatedButton {
+        AnimatedButton(tint: .blue) {
             Text("Animated Button")
         } action: {
             try? await Task.sleep(for: .seconds(2))
-            
-            return .failed("Failed!!")
+            return .failed
 //            return .success
         }
 
