@@ -13,6 +13,7 @@
 		33F920E62B5D6E3000F223CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F920E52B5D6E3000F223CC /* Preview Assets.xcassets */; };
 		33F920ED2B5D6F3400F223CC /* AnimatedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F920EC2B5D6F3400F223CC /* AnimatedButtonView.swift */; };
 		33F920EF2B5D716300F223CC /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F920EE2B5D716300F223CC /* AnimatedButton.swift */; };
+		33F920F22B5E571C00F223CC /* MovableGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F920F12B5E571C00F223CC /* MovableGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		33F920E52B5D6E3000F223CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33F920EC2B5D6F3400F223CC /* AnimatedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButtonView.swift; sourceTree = "<group>"; };
 		33F920EE2B5D716300F223CC /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
+		33F920F12B5E571C00F223CC /* MovableGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				33F920DE2B5D6E2F00F223CC /* SwiftUIExampleApp.swift */,
 				33F920E02B5D6E2F00F223CC /* ContentView.swift */,
 				33F920EC2B5D6F3400F223CC /* AnimatedButtonView.swift */,
+				33F920F12B5E571C00F223CC /* MovableGridView.swift */,
 				33F920E22B5D6E3000F223CC /* Assets.xcassets */,
 				33F920E42B5D6E3000F223CC /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			files = (
 				33F920ED2B5D6F3400F223CC /* AnimatedButtonView.swift in Sources */,
 				33F920E12B5D6E2F00F223CC /* ContentView.swift in Sources */,
+				33F920F22B5E571C00F223CC /* MovableGridView.swift in Sources */,
 				33F920EF2B5D716300F223CC /* AnimatedButton.swift in Sources */,
 				33F920DF2B5D6E2F00F223CC /* SwiftUIExampleApp.swift in Sources */,
 			);

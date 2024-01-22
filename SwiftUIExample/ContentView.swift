@@ -16,7 +16,12 @@ struct ContentView: View {
                 } label: {
                     Text("애니메이션 버튼")
                 }
-
+                
+                NavigationLink {
+                    MovableGridView()
+                } label: {
+                    Text("드래그 그리드")
+                }
             }
             .navigationTitle("SwiftUI Example")
         }
