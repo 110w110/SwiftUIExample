@@ -34,7 +34,6 @@ struct MovableGridView: View {
                                 draggingItem = nil
                                 return false
                             } isTargeted: { status in
-                                print(color)
                                 if let draggingItem, status, draggingItem != color {
                                    if let from = colors.firstIndex(of: draggingItem),
                                       let to = colors.firstIndex(of: color) {
